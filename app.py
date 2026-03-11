@@ -156,9 +156,6 @@ def create_pdf():
     pdf.set_font("Times","",10)
     pdf.multi_cell(0,6,
     "Thank you for supporting MUNA Georgia. Your sponsorship helps us serve the community and organize beneficial programs.")
-
-    pdf.ln(2)
-    # move signature to fixed position near bottom of page (give a bit more room)
     pdf.set_y(-25)
     pdf.set_font("Times","",11)
     
