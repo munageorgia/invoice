@@ -151,13 +151,14 @@ def create_pdf():
     pdf.cell(120,8,"Total", border=1)
     pdf.cell(30,8,f"${total:.2f}", border=1, ln=True)
 
-    pdf.ln(2)
-
     pdf.set_font("Times","",10)
     pdf.multi_cell(0,6,
     "Thank you for supporting MUNA Georgia. Your sponsorship helps us serve the community and organize beneficial programs.")
-    pdf.set_y(-25)
+
+    # immediately follow thank-you with signature block (compact)
+    pdf.ln(2)
     pdf.set_font("Times","",11)
+    
     
     pdf.set_font("Pacifico","",11)
     pdf.cell(0,4,"abdullah", ln=True, align="L")
